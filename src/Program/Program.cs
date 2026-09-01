@@ -14,11 +14,11 @@ namespace Ucu.Poo.GameOfLife
     {
         static void Main(string[] args)
         {
-            string folder = Path.GetDirectoryName(
-                Assembly.GetExecutingAssembly().Location);
+            string folder = Path.GetDirectoryName
+            (Assembly.GetExecutingAssembly().Location);
             string boardPath = Path.Combine(folder, "board.txt");
-            // Reemplaza 👇 esta línea con tu código
-            Console.WriteLine(boardPath);
+            Game game = new Game();
+            game.Iniciar(boardPath);
         }
     }
 }
