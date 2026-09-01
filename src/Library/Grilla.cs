@@ -1,10 +1,10 @@
 namespace Ucu.Poo.GameOfLife
 {
-    // SRP: su única razón de cambio es la lógica del juego en sí. esto incluye las reglas
+    // su única razón de cambio es la lógica del juego en sí. esto incluye las reglas
     // de Conway y el tamaño del tablero. No sabe leer archivos ni imprimir
     // por consola, así que un cambio en el formato de entrada o en la forma
     // de mostrar el tablero no la afecta.
-    // Expert: es la clase que tiene el estado de las células (this.celulas),
+    // es la clase que tiene el estado de las células (this.celulas),
     // así que es la que tiene la información necesaria para saber quién está
     // viva, contar vecinos y calcular la siguiente generación. Ninguna otra
     // clase debería conocer ni manipular esa matriz directamente.
@@ -36,9 +36,6 @@ namespace Ucu.Poo.GameOfLife
         /// <summary>
         /// Indica si la célula ubicada en (x, y) está viva.
         /// </summary>
-        /// <param name="x">Columna de la célula.</param>
-        /// <param name="y">Fila de la célula.</param>
-        /// <returns>true si la célula está viva; false en caso contrario.</returns>
         public bool EstaViva(int x, int y)
         {
             return this.celulas[x, y];
@@ -82,9 +79,6 @@ namespace Ucu.Poo.GameOfLife
         /// <summary>
         /// Cuenta cuántas de las 8 células vecinas de (x, y) están vivas.
         /// </summary>
-        /// <param name="x">Columna de la célula central.</param>
-        /// <param name="y">Fila de la célula central.</param>
-        /// <returns>Cantidad de vecinos vivos.</returns>
         private int ContarVecinosVivos(int x, int y)
         {
             int vecinosVivos = 0;

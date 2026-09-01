@@ -3,11 +3,11 @@ using System.Text;
 
 namespace Ucu.Poo.GameOfLife
 {
-    // SRP: su única razón de cambio es "cómo se muestra el tablero"
+    // su única razón de cambio es "cómo se muestra el tablero"
     // (símbolos usados, formato de consola, etc.). No conoce las reglas del
     // juego ni cómo se lee el archivo, solo sabe recorrer una Grilla y
     // convertirla en texto.
-    // Expert: no guarda ni calcula el estado del tablero, solo lo consume a
+    // no guarda ni calcula el estado del tablero, solo lo consume a
     // través de Grilla.EstaViva; por eso no es "experta" en el estado (esa
     // responsabilidad es de Grilla), pero sí es la clase indicada para
     // decidir cómo se representa visualmente cada célula.
@@ -17,7 +17,6 @@ namespace Ucu.Poo.GameOfLife
         /// Imprime el estado actual de la grilla por consola, representando
         /// las células vivas con "|X|" y las muertas con "___".
         /// </summary>
-        /// <param name="grilla">Grilla cuyo estado se va a mostrar.</param>
         public void Mostrar(Grilla grilla)
         {
             Console.Clear();

@@ -3,11 +3,11 @@ using System.Threading;
 
 namespace Ucu.Poo.GameOfLife
 {
-    // SRP: su única razón de cambio es "cómo se orquesta el flujo del
+    // su única razón de cambio es "cómo se orquesta el flujo del
     // juego". No sabe leer archivos, ni calcular reglas, ni imprimir: delega cada cosa en
     // LectorArchivo, Grilla y Print respectivamente.
-    // Expert: no es "experta" en ningún dato del dominio (no tiene el
-    // tablero ni el archivo), sino que actúa como coordinadora/controlador:
+    // no es "experta" en ningún dato del dominio (no tiene el
+    // tablero ni el archivo), sino que actúa como coordinador o controlador ya que
     // conoce a quién pedirle cada tarea, pero no la hace ella misma. Esto la
     // mantiene liviana y evita que concentre lógica que le corresponde a
     // otras clases.
